@@ -1,0 +1,543 @@
+/*
+Author       : Dreamguys
+Template Name: SmartHR - Bootstrap Admin Template
+Version      : 3.6
+*/
+
+/*============================
+ [Table of CSS]
+
+1. General
+2. Table
+3. Helper Class
+4. Bootstrap Classes
+5. Animation
+6. Toggle Button
+7. Modal
+8. Header
+9. Sidebar
+10. Content
+11. Login
+12. Dashboard
+13. Activity
+14. Select2
+15. Nav tabs
+16. Holidays
+17. Delete Modal
+18. Edit Profile
+19. Chat
+20. Focus Label
+21. Leave
+22. Employee
+23. Events
+24. Profile
+25. Notifications
+26. Roles & Permissions
+27. Chat Right Sidebar
+28. Projects
+29. Invoice
+30. Task
+31. Project View
+32. Payslip
+33. Attendance
+34. Ticket
+35. Client Profile
+36. Inbox
+37. Mail View
+38. Voice call
+39. Video Call
+40. Outgoing call
+41. Incoming call
+42. Contacts
+43. Chat Sidebar
+44. Jobs
+45. Job Details
+46. Notification Settings
+47. Leave Settings
+48. Termination
+49. Loader
+50. Payroll Items
+51. Error
+52. Lock Screen
+53. OTP
+54. Salary Settings
+55. Components
+56. Search
+57. Knowledgebase
+58. FAQ
+59. Employee Dashboard
+60. Performance Review
+61. Kanban Board
+62. File Manager
+63. Subscriptions
+64. Responsive
+
+========================================*/
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-ExtraBold.woff2") format("woff2"),
+    url("../fonts/NotoSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Black.woff2") format("woff2"),
+    url("../fonts/NotoSans-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Bold.woff2") format("woff2"),
+    url("../fonts/NotoSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Thin.woff2") format("woff2"),
+    url("../fonts/NotoSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Medium.woff2") format("woff2"),
+    url("../fonts/NotoSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-ExtraLight.woff2") format("woff2"),
+    url("../fonts/NotoSans-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Light.woff2") format("woff2"),
+    url("../fonts/NotoSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/NotoSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Regular.woff2") format("woff2"),
+    url("../fonts/NotoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*-----------------
+	1. General
+-----------------------*/
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  color: #1f1f1f;
+  background-color: #f7f7f7;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans";
+  margin-top: 0;
+  font-weight: 500;
+}
+h1,
+.h1 {
+  font-size: 2.25rem;
+}
+h2,
+.h2 {
+  font-size: 1.875rem;
+}
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+h4,
+.h4 {
+  font-size: 1.125rem;
+}
+h5,
+.h5 {
+  font-size: 0.875rem;
+}
+h6,
+.h6 {
+  font-size: 0.75rem;
+}
+p {
+  margin: 0;
+}
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.form-control {
+  border-color: #e3e3e3;
+  box-shadow: none;
+  font-size: 15px;
+  height: 44px;
+}
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: none;
+  outline: 0 none;
+}
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+input,
+button,
+a {
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+input,
+input:focus,
+button,
+button:focus {
+  outline: none;
+}
+input[type="file"] {
+  height: auto;
+}
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+textarea.form-control {
+  resize: vertical;
+  height: auto;
+}
+.navbar-nav > li {
+  float: left;
+}
+.form-control-lg.form-control {
+  border-radius: 4px;
+  height: 46px;
+}
+.form-control-sm.form-control {
+  height: 30px;
+  border-radius: 0;
+}
+.input-group.input-group-lg .form-control {
+  height: 46px;
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+.input-group-text {
+  background-color: #f7f7f7;
+  border-color: #e3e3e3;
+}
+select.form-control[multiple] option,
+select.form-control[size] option {
+  border-radius: 3px;
+  padding: 7px 12px;
+}
+select.form-control[multiple],
+select.form-control[size] {
+  height: 200px;
+  padding: 7px;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.table > :not(:first-child) {
+  border: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans";
+}
+.pageWrapper .searchBarWrapper {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-bottom: 1px solid #cecece;
+}
+.searchBarWrapper .searchBarFormWrapper {
+  width: 100%;
+}
+.searchBarFormWrapper .searchBarForm {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchBarForm .barText {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(0px, -50%);
+  font-weight: 700;
+}
+.searchBarForm .jobTitleWrapper,
+.searchBarForm .jobLocationWrapper {
+  position: relative;
+  flex: 1;
+  margin-right: 15px;
+}
+.searchBarForm .jobTitleInput {
+  padding: 13px 10px 13px 70px;
+  width: 100%;
+  margin-right: 15px;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
+  font-size: 16px;
+}
+.searchBarForm .jobLocationInput {
+  padding: 13px 10px 13px 80px;
+  width: 100%;
+  margin-right: 15px;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
+  font-size: 16px;
+}
+.btnPrimary {
+  background-color: #319195;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 110px;
+  font-size: 16px;
+  font-weight: 700;
+  border: transparent;
+}
+.btnPrimary:hover {
+  background-color: rgba(49, 145, 149, 0.7);
+}
+.tabBodyWrapper {
+  padding: 24px 24px;
+}
+.tabBody {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+  max-width: 1125px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5px;
+}
+.tabBody .bodyLeft {
+  flex: 1;
+  padding-right: 30px;
+}
+.jobCard {
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  padding: 15px;
+  display: block;
+  border-radius: 8px;
+  color: #1f1f1f;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.jobCard .jobTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.bodyLeft .jobCard .companyName {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3px 0;
+}
+.bodyLeft .btnPrimary {
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+}
+.jobCard .location {
+  font-size: 16px;
+  font-weight: 400;
+}
+.jobCard .description {
+  color: #6f6f6f;
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 15px 0;
+}
+.jobCard .date {
+  font-size: 14px;
+  font-weight: 400;
+}
+.bodyRight {
+  position: -webkit-sticky;
+  position: sticky;
+  flex: 1;
+  top: 10px;
+  height: 100vh;
+}
+.bodyRight .jobCard {
+  position: sticky;
+  top: 20px;
+}
+.bodyRight .jobCard .companyName {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 3px 0 0;
+  color: #319195;
+}
+.bodyRight .jobCard .cardTop {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.applyBtn {
+  display: inline-block;
+  padding: 15px;
+  text-align: center;
+  background-color: #319195;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.applyBtn:hover {
+  background-color: rgba(49, 145, 149, 0.7);
+}
+.bodyRight .cardBody {
+  max-height: 79vh;
+  min-height: 79vh;
+  overflow: auto;
+}
+.submitForm {
+  padding: 20px 0;
+  background-color: #fff;
+  min-height: 100vh;
+}
+.submitForm .pageTitle {
+  padding: 0 40px;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+}
+.submitForm .pageTitle h1,
+.submitForm .pageTitle h6 {
+  margin-bottom: 0;
+}
+.submitForm .jobFormWrapper {
+  padding: 20px 40px;
+}
+.submitForm .jobFormWrapper .inputBoxWrapper {
+  flex: 1 1 48%;
+  margin-right: 15px;
+}
+.submitForm .jobFormWrapper .inputBox {
+  padding: 13px 15px 13px 15px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.submitForm .jobFormWrapper .inputBoxWrapper:nth-child(2n) {
+  margin-right: 0;
+}
+.submitForm .jobFormWrapper label {
+  padding-bottom: 10px;
+  display: block;
+}
+.submitForm .jobFormWrapper textarea.inputBox {
+  margin-bottom: 0;
+  max-width: 100%;
+  resize: vertical;
+}
+.submitForm .jobFormWrapper .jobForm {
+  max-width: 815px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.submitForm .jobFormWrapper .jobForm .submitBtn {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+.textAreaWrapper {
+  width: 100%;
+}
+.btnBack {
+  position: absolute;
+  right: 20px;
+  top: 40%;
+  transform: translate(0, -50%);
+  background-color: #fff;
+  color: #319195;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 110px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #319195;
+}
+.btnBack:hover{
+  background-color: #319195;
+  color: #fff;
+}
